@@ -1,6 +1,6 @@
 {
   "name": "@room-project/rpc-client",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "main": "build/index.js",
   "files": [
     "build"
