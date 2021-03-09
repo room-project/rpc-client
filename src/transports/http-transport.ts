@@ -33,11 +33,12 @@ export interface IRpcClientHttpTransportFactory {
  * @param options дополнительные опции
  */
 export const RpcClientHttpTransport: IRpcClientHttpTransportFactory = (options) => {
-  const open = () => Promise.resolve()
-  const close = () => Promise.resolve()
+  const open = createEffect<void, void>('open')
+  const close = createEffect<void, void>('close')
   const send: Effect<string, string | null> = createEffect('send', {
     handler: async (payload: string) => {
       try {
+        await open()
         const response = await fetch(options.uri, {
           method: 'POST',
           headers: {
@@ -59,15 +60,22 @@ export const RpcClientHttpTransport: IRpcClientHttpTransportFactory = (options) 
         return await response.text()
       } catch (error) {
         throw error
+      } finally {
+        close()
       }
     },
   })
 
-  return {
+  open.use(async () => {})
+  close.use(async () => {})
+
+  const transport: IRpcClientTransport = {
     send,
     open,
-    close,
+    close
   }
+
+  return transport
 }
 
 RpcClientHttpTransport.of = RpcClientHttpTransport
