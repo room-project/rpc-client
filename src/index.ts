@@ -48,7 +48,7 @@ export const RpcClient: IRpcClientFactory = ({ service, transport }) => {
     const handler = async (params: RpcMessageParams) => {
       const request: IRpcRequest = {
         id: createUUIDv4().toString(),
-        name: effect.compositeName.fullName,
+        name: effect.shortName,
         params,
       }
 
