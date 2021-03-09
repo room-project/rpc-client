@@ -1,0 +1,43 @@
+{
+  "name": "@room-project/rpc-client",
+  "version": "0.2.0",
+  "main": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "cleanup": "rm -fr build",
+    "build": "npm run cleanup && tsc",
+    "dev": "npm run cleanup && tsc --watch",
+    "docs:cleanup": "rm -fr docs",
+    "docs:build": "npm run docs:cleanup && typedoc --hideGenerator --out ./docs ./src/index.ts",
+    "docs:open": "open docs/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/room-project/rpc-client.git"
+  },
+  "author": "Dmitry Dudin <dima.dudin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/room-project/rpc-client/issues"
+  },
+  "homepage": "https://github.com/room-project/rpc-client#readme",
+  "dependencies": {
+    "@room-project/rpc-core": "0.2.2",
+    "isomorphic-fetch": "3.0.0"
+  },
+  "devDependencies": {
+    "@types/isomorphic-fetch": "0.0.35",
+    "effector": "21.8.4",
+    "typedoc": "0.20.29",
+    "typescript": "4.2.3"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true
+  }
+}
