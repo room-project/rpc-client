@@ -15,7 +15,6 @@ export interface IRpcClientHttpTransportFactory {
   of: IRpcClientHttpTransportFactory
 }
 
-
 /**
  * Создаёт HTTP-транспорт
  *
