@@ -4,14 +4,14 @@ import { IRpcClientTransport } from '@room-project/rpc-core'
 
 type CredentialsOption = 'omit' | 'same-origin' | 'include'
 
-export interface IHttpTransportOptions {
+export interface IRpcClientHttpTransportOptions {
   uri: string
   headers?: Record<string, string>
   credentials?: CredentialsOption
 }
 
 export interface IRpcClientHttpTransportFactory {
-  (options: IHttpTransportOptions): IRpcClientTransport
+  (options: IRpcClientHttpTransportOptions): IRpcClientTransport
   of: IRpcClientHttpTransportFactory
 }
 
