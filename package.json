@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/room-project/rpc-client#readme",
   "dependencies": {
-    "@room-project/rpc-core": "0.5.1",
+    "@room-project/rpc-core": "0.5.2",
     "effector": "21.8.5",
     "isomorphic-fetch": "3.0.0"
   },
