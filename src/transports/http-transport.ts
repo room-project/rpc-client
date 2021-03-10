@@ -35,6 +35,7 @@ export interface IRpcClientHttpTransportFactory {
 export const RpcClientHttpTransport: IRpcClientHttpTransportFactory = (options) => {
   const open = createEffect<void, void>('open')
   const close = createEffect<void, void>('close')
+
   const send: Effect<string, string | null> = createEffect('send', {
     handler: async (payload: string) => {
       try {
