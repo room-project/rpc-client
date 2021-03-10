@@ -1,22 +1,23 @@
 {
   "compilerOptions": {
-    "lib": [
-      "ES6",
-      "DOM"
-    ],
-    "removeComments": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "declaration": true,
-    "strict": true,
-    "module": "ES6",
     "target": "esnext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
     "moduleResolution": "node",
-    "outDir": "./build",
-    "rootDir": "./src"
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationDir": "build/types",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "build"
   ],
   "include": [
     "src"
