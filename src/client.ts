@@ -10,6 +10,10 @@ import {
 
 import { IRpcClientTransport } from './transport'
 
+import { version } from '../package.json'
+
+export const VERSION = version
+
 export interface IRpcClient<S extends IRpcService, T extends IRpcClientTransport> {
   readonly service: S
   readonly transport: T

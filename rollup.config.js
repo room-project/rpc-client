@@ -7,7 +7,16 @@ import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
 const input = 'src/index.ts'
-const plugins = [json(), resolve(), typescript(), commonjs(), terser({ output: { comments: false } })]
+
+const plugins = [
+  json(),
+  resolve(),
+  typescript(),
+  commonjs(),
+  terser({ output: { comments: false } }),
+]
+
+const external = ['isomorphic-fetch']
 
 export default [
   {
@@ -18,6 +27,7 @@ export default [
       sourcemap: true,
     },
     plugins,
+    external,
   },
   {
     input,
@@ -27,5 +37,6 @@ export default [
       sourcemap: true,
     },
     plugins,
+    external,
   },
 ]
