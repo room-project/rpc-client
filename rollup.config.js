@@ -16,7 +16,10 @@ const plugins = [
   terser({ output: { comments: false } }),
 ]
 
-const external = ['isomorphic-fetch']
+const external = [
+  ...Object.keys(pkg.dependencies),
+  ...Object.keys(pkg.peerDependencies)
+]
 
 export default [
   {
