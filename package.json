@@ -1,6 +1,6 @@
 {
   "name": "@room-project/rpc-client",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "main": "build/index.cjs.js",
   "module": "build/index.esm.js",
   "types": "build/types/index.d.ts",
