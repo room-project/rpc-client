@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser'
 
 import pkg from './package.json'
 
-const input = 'src/index.ts'
+const input = 'index.ts'
 
 const plugins = [
   json(),
