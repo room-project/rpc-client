@@ -28,12 +28,15 @@
   },
   "homepage": "https://github.com/room-project/rpc-client#readme",
   "dependencies": {
-    "@room-project/rpc-core": "0.5.2",
-    "effector": "21.8.5",
+    "@room-project/rpc-core": "0.6.0",
     "isomorphic-fetch": "3.0.0"
+  },
+  "peerDependencies": {
+    "effector": "21.8.5"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "17.1.0",
+    "@rollup/plugin-json": "4.1.0",
     "@rollup/plugin-node-resolve": "11.2.0",
     "@rollup/plugin-typescript": "8.2.0",
     "@types/isomorphic-fetch": "0.0.35",
